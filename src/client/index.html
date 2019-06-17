@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const socket = io();
+                socket.on("updateTime", (data) => {
+                    document.getElementById("timerComponent").innerHTML = data.time;
+                });
+            });
+        </script>
+        <title>Timer</title>
+    </head>
+
+    <body>
+        <h2 id="timerComponent"></h2>
+    </body>
+</html>
