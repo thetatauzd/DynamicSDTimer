@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eux;
 port="8999"
 if [[ "docker -q" ]]; then
     docker build -t sdtimer .
